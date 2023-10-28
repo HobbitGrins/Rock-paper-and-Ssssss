@@ -8,7 +8,7 @@ function gameRound(playerItem, computerItem){
     if(playerItem != 'rock' && playerItem != 'paper' && playerItem != 'scissors' ){
       alert('Please play the game correctly. That is invalid');
       return;
-      ``
+      
     }
 
 
@@ -22,7 +22,7 @@ function gameRound(playerItem, computerItem){
     }
 
     if (playerItem == computerItem) {
-      console.log("It's a tie. No points added");
+      alert("It's a tie. No points added");
       
     } else if (
       (playerItem == 'rock' && computerItem == 'scissors') || 
@@ -30,21 +30,21 @@ function gameRound(playerItem, computerItem){
       (playerItem == 'scissors' && computerItem == 'paper') 
       
     ) {
-      console.log('You win the round computer chose ' + computerItem );
+      alert('You win the round computer chose ' + computerItem );
       playerScore = playerScore + 1;
-      console.log(`You ${playerScore} || Computer ${computerScore}`);
+      alert(`You ${playerScore} || Computer ${computerScore}`);
       
     } else {
-      console.log('You lose the round computer chose ' + computerItem);
+      alert('You lose the round computer chose ' + computerItem);
       computerScore = computerScore + 1;
-      console.log(`You ${playerScore} || Computer ${computerScore}`);
+      alert(`You ${playerScore} || Computer ${computerScore}`);
     }
 
     if (playerScore == 5){
-      console.log("Your score has reached it's limit in other words you won");
+      alert("Your score has reached it's limit in other words you won");
       return;
     } else if ( computerScore == 5 ) {
-      console.log("Computer's score has reached it's limit in other words you have tasted defeat.");
+      alert("Computer's score has reached it's limit in other words you have tasted defeat.");
       return;
     }
   }
